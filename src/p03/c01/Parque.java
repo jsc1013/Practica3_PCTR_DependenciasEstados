@@ -99,9 +99,14 @@ public class Parque implements IParque{
 	}
 
 	protected void comprobarAntesDeEntrar(){
-		//
-		// TODO
-		//
+		if (contadorPersonasTotales >= MAX_PERSONAS) {
+			try {
+				this.wait();
+			} catch (InterruptedException ex) {
+				Thread.currentThread().interrupt();
+				ex.printStackTrace();
+			}
+		}
 	}
 
 	protected void comprobarAntesDeSalir(){
