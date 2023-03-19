@@ -25,8 +25,8 @@ public class Parque implements IParque{
 			contadoresPersonasPuerta.put(puerta, 0);
 		}
 		
-		// TODO
-				
+		// Antes de dejar entrar hay que hacer la comprobaci�n
+		comprobarAntesDeEntrar();	
 		
 		// Aumentamos el contador total y el individual
 		contadorPersonasTotales++;		
@@ -35,11 +35,11 @@ public class Parque implements IParque{
 		// Imprimimos el estado del parque
 		imprimirInfo(puerta, "Entrada");
 		
-		// TODO
-		
-		
-		// TODO
-		
+		// Hacemos las comprobaciones del invariante
+		checkInvariante();
+
+		// Despertamos el resto de hilos
+		this.notifyAll();
 	}
 	
 	// 
