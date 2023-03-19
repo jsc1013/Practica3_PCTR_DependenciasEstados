@@ -1,6 +1,6 @@
 package src.p03.c01;
 
-public class ActividadSalidaPuerta{
+public class ActividadSalidaPuerta implements Runnable{
 
 	private static final int NUMSALIDAS = 20;
 	private String puerta;
