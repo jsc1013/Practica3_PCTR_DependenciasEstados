@@ -110,9 +110,14 @@ public class Parque implements IParque{
 	}
 
 	protected void comprobarAntesDeSalir(){
-		//
-		// TODO
-		//
+		while (contadorPersonasTotales <= 0) {
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+				Thread.currentThread().interrupt();
+				e.printStackTrace();
+			}
+		}
 	}
 
 
