@@ -21,7 +21,7 @@ public class Parque implements IParque{
 	// Método entrarAlParque
 	//
 	@Override
-	public void entrarAlParque(String puerta){	
+	public synchronized void entrarAlParque(String puerta){	
 		
 		// Si no hay entradas por esa puerta, inicializamos
 		if (contadoresPersonasPuerta.get(puerta) == null){
